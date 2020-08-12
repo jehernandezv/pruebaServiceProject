@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 const multer = require('multer');
 const path = require('path');
 const cloudinary = require('cloudinary');
-const fs = require('fs-extra');
+const fs = require('fs');
 const uuid = require('uuid').v4;
 
 //require('./database');
@@ -74,7 +74,7 @@ app.post('/addCovid',async (req,res) => {
 
        //await patient.save();
        //eliminando imagen del server
-        await fs.unlink(req.file.path);
+        fs.unlinkSync(req.file.path);
         console.log('Se ha guardado un paciente')
 
         res.json({
