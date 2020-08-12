@@ -51,11 +51,12 @@ app.post('/addCovid', (req,res) => {
         console.log(req.file.originalname);
         console.log(req.body.city);
 
+        /*
         const patient = new Patient({
             name:req.body.name,
             city:req.body.city,
             UrlImage:uuid()
-        });
+        });*/
 
        // patient.save();
         console.log('Se ha guardado un paciente')
