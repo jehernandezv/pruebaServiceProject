@@ -19,6 +19,13 @@ app.get('/',function(req,res){
     })
 });
 
+app.get('/:city',function(req,res){
+    console.log(req.params.city);
+    res.json({
+        message: 'get de cuidad del server: ' + numServer
+    });
+});
+
 
 
 app.listen(port, function () {
