@@ -3,8 +3,8 @@ var cors = require('cors');
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 const multer = require('multer');
-require('./database');
-const Patient = require('./models/Patient');
+//require('./database');
+//const Patient = require('./models/Patient');
 const uuid = require('uuid').v4;
 var port = process.argv[2];
 var numServer = process.argv[3];
@@ -57,7 +57,7 @@ app.post('/addCovid', (req,res) => {
             UrlImage:uuid()
         });
 
-        patient.save();
+       // patient.save();
         console.log('Se ha guardado un paciente')
 
         res.json({
